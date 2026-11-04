@@ -1,0 +1,96 @@
+/* Savanna Brew Cafe - Lynne Wamucii - Assignment 1 */
+:root{
+  --primary:#6F4E37;
+  --secondary:#F5E9DA;
+  --accent:#D9822B;
+  --dark:#2B1B12;
+  --white:#FFFFFF;
+  --light:#FFF8EE;
+  --heading-font:'Playfair Display', Georgia, serif;
+  --body-font:'Open Sans', Arial, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--body-font);font-size:16px;line-height:1.6;color:var(--dark);background:var(--secondary)}
+a{color:var(--primary);text-decoration:none}
+a:hover{color:var(--accent)}
+img{max-width:100%;height:auto;display:block}
+header{background:var(--secondary);border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:10}
+.nav-wrap{max-width:1100px;margin:0 auto;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-family:var(--heading-font);font-size:28px;font-weight:700;color:var(--primary)}
+.logo span{display:block;font-size:12px;letter-spacing:2px;color:var(--accent);font-family:var(--body-font)}
+nav ul{list-style:none;display:flex;gap:8px;flex-wrap:wrap}
+nav a{padding:8px 14px;border-radius:20px;font-weight:600}
+nav a:hover{background:var(--accent);color:var(--white)}
+nav a.active{background:var(--primary);color:var(--white)}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 40px}
+h1,h2,h3{font-family:var(--heading-font);color:var(--primary);line-height:1.3}
+h1{font-size:38px;margin:14px 0}
+h2{font-size:28px;margin:28px 0 12px}
+h3{font-size:20px;margin:16px 0 8px}
+p{margin-bottom:12px}
+.hero{position:relative;border-radius:14px;overflow:hidden;background:var(--primary);min-height:340px;display:flex;align-items:center}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75}
+.hero-text{position:relative;padding:32px;color:var(--white);max-width:620px;animation:fadeIn 1.2s ease-in}
+.hero-text h1{color:var(--white);font-size:46px}
+.hero-text p{font-size:18px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.btn{display:inline-block;background:var(--accent);color:var(--white);padding:12px 22px;border-radius:30px;font-weight:700;margin:8px 8px 0 0;border:none;cursor:pointer;transition:background .3s, transform .3s}
+.btn:hover{background:var(--primary);transform:translateY(-2px)}
+.btn-outline{background:transparent;border:2px solid var(--white);color:var(--white)}
+.btn-outline:hover{background:var(--white);color:var(--primary)}
+.cards{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px}
+.card{flex:1 1 280px;background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.08);transition:transform .3s}
+.card:hover{transform:translateY(-5px)}
+.card img{width:100%;height:210px;object-fit:cover}
+.card-body{padding:16px}
+.price{color:var(--accent);font-weight:700}
+.two-col{display:flex;gap:24px;align-items:flex-start}
+.two-col > *{flex:1}
+.two-col img{border-radius:12px;height:360px;object-fit:cover;width:100%}
+.menu-table{width:100%;border-collapse:collapse;background:var(--white);margin:12px 0 28px;border-radius:10px;overflow:hidden}
+.menu-table th{background:var(--primary);color:var(--white);text-align:left;padding:12px}
+.menu-table td{padding:12px;border-bottom:1px solid #eee}
+.menu-table tr:nth-child(even){background:var(--light)}
+.menu-table tr:hover{background:#FDEBD0}
+.menu-table td:last-child{font-weight:700;color:var(--primary);white-space:nowrap}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gallery-grid figure{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.gallery-grid img{width:100%;height:220px;object-fit:cover;transition:transform .4s}
+.gallery-grid figure:hover img{transform:scale(1.07)}
+.gallery-grid figcaption{padding:12px;text-align:center;font-weight:600;color:var(--primary)}
+.contact-grid{display:flex;gap:22px;align-items:flex-start}
+.contact-grid > *{flex:1}
+.form-box,.info-box{background:var(--white);border:1px solid #e8d9c5;border-radius:12px;padding:20px}
+.form-group{margin-bottom:14px}
+label{display:block;font-weight:600;margin-bottom:6px}
+input,select,textarea{width:100%;padding:11px;border:1px solid #ccc;border-radius:8px;font:inherit;background:var(--light)}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--accent);border-color:var(--accent)}
+fieldset{border:1px solid #ddd;border-radius:8px;padding:12px;margin-bottom:14px}
+legend{font-weight:700;padding:0 6px;color:var(--primary)}
+.radio-row{display:flex;gap:16px;flex-wrap:wrap}
+.radio-row label{display:flex;gap:6px;align-items:center;font-weight:400}
+.radio-row input{width:auto}
+.map-frame{width:100%;height:280px;border:0;border-radius:10px;margin-top:12px}
+footer{background:var(--primary);color:var(--white);margin-top:20px}
+.footer-grid{max-width:1100px;margin:0 auto;padding:28px 16px;display:flex;gap:24px;flex-wrap:wrap}
+.footer-grid > div{flex:1 1 220px}
+footer a{color:var(--secondary)}
+footer h3{color:var(--white)}
+.copyright{text-align:center;padding:12px;border-top:1px solid rgba(255,255,255,.2);font-size:14px}
+@media (max-width:768px){
+  .nav-wrap{flex-direction:column;text-align:center}
+  nav ul{flex-direction:column;width:100%}
+  nav a{display:block;text-align:center}
+  .hero-text h1{font-size:32px}
+  .two-col,.contact-grid,.footer-grid{flex-direction:column}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .menu-table{font-size:14px}
+}
+@media (max-width:500px){
+  .gallery-grid{grid-template-columns:1fr}
+  h1{font-size:28px}
+}
+@media (prefers-color-scheme:dark){
+  body{background:#1a120d;color:#f5e9da}
+  .card,.form-box,.info-box,.menu-table{background:#2b1b12;color:#f5e9da}
+}
