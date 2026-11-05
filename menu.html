@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Menu | Savanna Brew Café</title><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Menu - Savanna Brew</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+body { background:#fff8ec; color:#3b2314; }
+.topbar { background:#fff; display:flex; justify-content:space-between; align-items:center; padding:10px 20px; border-bottom:3px solid #5c3317; }
+.logo { display:flex; align-items:center; gap:10px; }
+.logo-text { font-size:24px; font-weight:bold; color:#5c3317; line-height:1; }
+.logo-text small { font-size:10px; letter-spacing:2px; color:#b7792b; display:block; }
+nav a { text-decoration:none; color:#5c3317; margin:0 10px; font-weight:bold; padding:6px 12px; border-radius:20px; }
+nav a.active { background:#5c3317; color:#fff; }
+.hero { background:#5c3317; color:#fff; padding:30px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+.hero h1 { font-size:52px; font-style:italic; font-weight:bold; line-height:1; }
+.hero p { font-size:18px; margin-top:5px; font-style:italic; }
+.hero img { width:280px; max-width:100%; height:170px; object-fit:cover; border-radius:10px; border:3px solid #fff; }
+.container { max-width:950px; margin:20px auto; padding:0 15px; }
+.section-title { background:#5c3317; color:#fff; padding:10px 15px; border-radius:12px 12px 0 0; font-size:20px; font-weight:bold; }
+table { width:100%; border-collapse:collapse; margin-bottom:25px; background:#fff7e0; border:2px solid #5c3317; border-radius:0 0 12px 12px; overflow:hidden; }
+th { background:#f7b731; color:#5c3317; padding:8px; text-align:left; font-size:15px; }
+th:last-child, td:last-child { text-align:center; }
+td { padding:9px 8px; border-bottom:1px solid #e8d5a8; font-size:15px; }
+tr:last-child td { border-bottom:none; }
+.note { background:#f7b731; padding:12px; text-align:center; font-weight:bold; border-radius:20px; margin:10px 0 25px; }
+footer { background:#5c3317; color:#fff; padding:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:15px; }
+footer h3 { font-size:20px; }
+footer a { color:#fff; text-decoration:none; }
+@media(max-width:600px){ .hero h1{font-size:36px;} nav a{margin:0 4px; padding:5px 7px; font-size:13px;} }
+</style>
+</head>
 <body>
-<header><div class="nav-wrap"><a href="index.html" class="logo">Savanna Brew<span>COFFEE • GOOD VIBES • KENYA</span></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="menu.html" class="active">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></header>
-<main><h1>Our Menu</h1><p>All prices in Kenyan Shillings. All drinks made with fresh Kenyan beans.</p>
-<h2>Coffee</h2><table><thead><tr><th>Item</th><th>Description</th><th>Price</th></tr></thead><tbody><tr><td>Espresso</td><td>Strong single shot</td><td>KES 200</td></tr><tr><td>Caffe Latte</td><td>Espresso with steamed milk</td><td>KES 320</td></tr><tr><td>Cappuccino</td><td>Espresso with milk and foam</td><td>KES 300</td></tr><tr><td>Mocha</td><td>Espresso with chocolate and milk</td><td>KES 350</td></tr><tr><td>Cold Brew</td><td>Slow-brewed iced coffee</td><td>KES 350</td></tr></tbody></table>
-<h2>Pastries</h2><table><thead><tr><th>Item</th><th>Description</th><th>Price</th></tr></thead><tbody><tr><td>Butter Croissant</td><td>Flaky, freshly baked</td><td>KES 250</td></tr><tr><td>Banana Bread</td><td>Moist with walnuts</td><td>KES 200</td></tr><tr><td>Mandazi</td><td>Kenyan sweet fried dough</td><td>KES 150</td></tr><tr><td>Chocolate Muffin</td><td>Rich chocolate</td><td>KES 220</td></tr></tbody></table>
-<h2>Light Bites</h2><ul><li><strong>Samosa (2 pcs)</strong> - KES 180 - Beef or vegetable</li><li><strong>Club Sandwich</strong> - KES 450 - Chicken, egg, tomato</li><li><strong>Avocado Toast</strong> - KES 380 - On sourdough with chilli flakes</li></ul>
-<p><a class="btn" href="contact.html">Book a Table</a></p></main>
-<footer><div class="footer-grid"><div><h3>Savanna Brew</h3><p>14 Coffee Lane, Westlands, Nairobi<br>+254 700 123 456<br><a href="mailto:hello@savannabrew.example">hello@savannabrew.example</a></p></div><div><h3>Opening Hours</h3><p>Mon - Fri: 7:00 AM - 9:00 PM<br>Sat: 8:00 AM - 10:00 PM<br>Sun: 9:00 AM - 6:00 PM</p></div><div><h3>Follow Us</h3><p><a href="https://instagram.com/savannabrew" target="_blank" rel="noopener">Instagram @savannabrew</a><br><a href="https://facebook.com/savannabrewcafe" target="_blank" rel="noopener">Facebook /savannabrewcafe</a></p></div></div><p class="copyright">© 2026 Savanna Brew Café. All rights reserved.</p></footer>
-</body></html>
+
+<div class="topbar">
+  <div class="logo">
+    <span style="font-size:32px;">☕</span>
+    <div class="logo-text">Savanna Brew<small>COFFEE • GOOD VIBES • KENYA</small></div>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html" class="active">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <div>
+    <h1>Our Menu</h1>
+    <p>All prices are in KES</p>
+  </div>
+  <img src="images/menu-hero.jpg" alt="Latte art coffee">
+</div>
+
+<div class="container">
+
+  <div class="section-title">☕ &nbsp; HOT DRINKS</div>
+  <table>
+    <tr><th>Item</th><th>Description</th><th>Price (KES)</th></tr>
+    <tr><td>Espresso</td><td>Rich, bold coffee shot.</td><td>200</td></tr>
+    <tr><td>Americano</td><td>Smooth and refreshing.</td><td>250</td></tr>
+    <tr><td>Cappuccino</td><td>Perfect blend of coffee and milk.</td><td>300</td></tr>
+    <tr><td>Latte</td><td>Creamy and smooth.</td><td>320</td></tr>
+    <tr><td>Mocha</td><td>Coffee with chocolate.</td><td>350</td></tr>
+  </table>
+
+  <div class="section-title">🥤 &nbsp; COLD DRINKS</div>
+  <table>
+    <tr><th>Item</th><th>Description</th><th>Price (KES)</th></tr>
+    <tr><td>Iced Coffee</td><td>Chilled and invigorating.</td><td>300</td></tr>
+    <tr><td>Iced Latte</td><td>Cool and creamy.</td><td>350</td></tr>
+    <tr><td>Fresh Juice</td><td>Natural fruit juice.</td><td>250</td></tr>
+    <tr><td>Smoothie</td><td>Fruity and refreshing.</td><td>350</td></tr>
+  </table>
+
+  <div class="section-title">🥐 &nbsp; BAKERY & SNACKS</div>
+  <table>
+    <tr><th>Item</th><th>Description</th><th>Price (KES)</th></tr>
+    <tr><td>Croissant</td><td>Buttery and flaky.</td><td>250</td></tr>
+    <tr><td>Muffin
