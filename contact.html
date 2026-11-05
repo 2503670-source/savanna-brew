@@ -1,8 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact Us | Savanna Brew Café</title><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Reservations - Savanna Brew</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+body { background:#fff8ec; color:#3b2314; }
+.topbar { background:#fff; display:flex; justify-content:space-between; align-items:center; padding:10px 20px; border-bottom:3px solid #5c3317; }
+.logo { display:flex; align-items:center; gap:10px; }
+.logo-text { font-size:24px; font-weight:bold; color:#5c3317; line-height:1; }
+.logo-text small { font-size:10px; letter-spacing:2px; color:#b7792b; display:block; }
+nav a { text-decoration:none; color:#5c3317; margin:0 10px; font-weight:bold; padding:6px 12px; border-radius:20px; }
+nav a.active { background:#5c3317; color:#fff; }
+.hero { background:#5c3317; color:#fff; padding:30px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+.hero h1 { font-size:52px; font-style:italic; font-weight:bold; line-height:1; }
+.hero img { width:280px; max-width:100%; height:170px; object-fit:cover; border-radius:10px; border:3px solid #fff; }
+.container { max-width:1000px; margin:20px auto; padding:0 15px; display:flex; gap:15px; flex-wrap:wrap; }
+.card { background:#fff7e0; border:1px solid #e8d5a8; border-radius:12px; overflow:hidden; flex:1; min-width:300px; }
+.card-header { background:#5c3317; color:#fff; padding:10px 15px; font-weight:bold; font-size:18px; }
+.card-body { padding:15px; }
+label { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; font-size:14px; }
+label span { width:80px; }
+input, select, textarea { flex:1; padding:8px; border:1px solid #d9c48a; border-radius:8px; font-size:14px; }
+textarea { resize:vertical; }
+.radios { flex:1; display:flex; gap:10px; font-size:13px; }
+.radios label { margin:0; display:flex; gap:4px; align-items:center; }
+.btn { background:#5c3317; color:#fff; border:none; padding:10px 20px; border-radius:10px; font-weight:bold; cursor:pointer; display:block; margin:10px auto 0; font-size:15px; }
+.info-row { display:flex; gap:10px; margin-bottom:12px; font-size:14px; }
+.hours { background:#fff3c4; border:1px solid #e8d5a8; border-radius:10px; padding:10px; font-size:13px; margin-left:auto; min-width:160px; }
+.hours b { display:block; margin-bottom:5px; text-align:center; }
+.hours div { display:flex; justify-content:space-between; padding:2px 0; }
+.map { width:100%; height:180px; border:0; border-radius:10px; margin-top:10px; }
+.map-btn { display:block; text-align:center; margin-top:10px; background:#fff; border:1px solid #ccc; padding:8px; border-radius:20px; text-decoration:none; color:#333; font-size:14px; font-weight:bold; }
+footer { background:#5c3317; color:#fff; padding:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:15px; margin-top:25px; }
+footer h3 { font-size:20px; }
+@media(max-width:700px){ .hero h1{font-size:36px;} nav a{margin:0 4px; padding:5px 7px; font-size:13px;} .container{flex-direction:column;} }
+</style>
+</head>
 <body>
-<header><div class="nav-wrap"><a href="index.html" class="logo">Savanna Brew<span>COFFEE • GOOD VIBES • KENYA</span></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html" class="active">Contact</a></li></ul></nav></div></header>
-<main><h1>Contact Us</h1><div class="two-col"><div><h2>Find Us</h2><p><strong>Address:</strong><br>14 Coffee Lane, Westlands,<br>Nairobi, Kenya</p><p><strong>Phone:</strong> <a href="tel:+254700123456">+254 700 123 456</a><br><strong>Email:</strong> <a href="mailto:hello@savannabrew.example">hello@savannabrew.example</a></p><h2>Opening Hours</h2><p>Mon - Fri: 7:00 AM - 9:00 PM<br>Sat: 8:00 AM - 10:00 PM<br>Sun: 9:00 AM - 6:00 PM</p><h2>Find Us on the Map</h2><iframe title="Map showing Savanna Brew Cafe in Westlands Nairobi" src="https://www.google.com/maps?q=Westlands%20Nairobi&output=embed" width="100%" height="300" style="border:0;" loading="lazy"></iframe></div><div><h2>Book a Table / Send a Message</h2><form action="#" method="post"><label for="name">Your Name *</label><input type="text" id="name" name="name" placeholder="e.g. Lynne Wamucii" required><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="you@example.com" required><label for="phone">Phone</label><input type="tel" id="phone" name="phone" placeholder="+254 7XX XXX XXX"><label for="date">Preferred Date</label><input type="date" id="date" name="date"><label for="guests">Number of Guests</label><select id="guests" name="guests"><option value="1">1 person</option><option value="2" selected>2 people</option><option value="3">3 people</option><option value="4">4 people</option><option value="5+">5+ people</option></select><fieldset><legend>What are you booking for?</legend><label><input type="radio" name="purpose" value="coffee" checked> Just coffee</label><label><input type="radio" name="purpose" value="meeting"> Business meeting</label><label><input type="radio" name="purpose" value="birthday"> Birthday / Celebration</label></fieldset><label><input type="checkbox" name="newsletter" checked> Send me news and offers from Savanna Brew</label><label for="message">Your Message *</label><textarea id="message" name="message" rows="5" placeholder="Tell us what you need..." required></textarea><button type="submit" class="btn">Send Message</button><button type="reset" class="btn btn-outline">Clear Form</button></form></div></div></main>
-<footer><div class="footer-grid"><div><h3>Savanna Brew</h3><p>14 Coffee Lane, Westlands, Nairobi<br>+254 700 123 456<br><a href="mailto:hello@savannabrew.example">hello@savannabrew.example</a></p></div><div><h3>Opening Hours</h3><p>Mon - Fri: 7:00 AM - 9:00 PM<br>Sat: 8:00 AM - 10:00 PM<br>Sun: 9:00 AM - 6:00 PM</p></div><div><h3>Follow Us</h3><p><a href="https://instagram.com/savannabrew" target="_blank" rel="noopener">Instagram @savannabrew</a><br><a href="https://facebook.com/savannabrewcafe" target="_blank" rel="noopener">Facebook /savannabrewcafe</a></p></div></div><p class="copyright">© 2026 Savanna Brew Café. All rights reserved.</p></footer>
-</body></html>
+
+<div class="topbar">
+  <div class="logo">
+    <span style="font-size:32px;">☕</span>
+    <div class="logo-text">Savanna Brew<small>COFFEE • GOOD VIBES • KENYA</small></div>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <div><h1>Contact & Reservations</h1></div>
+  <img src="images/hero.jpg" alt="Latte art coffee">
+</div>
+
+<div class="container">
+
+  <!-- LEFT: FORM -->
+  <div class="card">
+    <div class="card-header">📅 &nbsp; RESERVATION FORM</div>
+    <div class="card-body">
+      <form onsubmit="alert('Thank you! Your reservation request has been received. We will contact you soon.'); return false;">
+        <label><span>Full name:</span><input type="text" placeholder="Enter your full name" required></label>
+        <label><span>Email:</span><input type="email" placeholder="Enter your email address" required></label>
+        <label><span>Phone:</span><input type="tel" placeholder="Enter your phone number" required></label>
+        <label><span>Date:</span><input type="date" required></label>
+        <label><span>Time:</span><select required><option value="">Select time</option><option>8:00 AM</option><option>10:00 AM</option><option>12:00 PM</option><option>2:00 PM</option><option>4:00 PM</option><option>6:00 PM</option><option>8:00 PM</option></select></label>
+        <label><span>Guests:</span><select required><option value="">Select number of guests</option><option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5+ Guests</option></select></label>
+        <label><span>Occasion:</span><div class="radios"><label><input type="radio" name="occasion"> Birthday</label><label><input type="radio" name="occasion"> Business</label><label><input type="radio" name="occasion"> Other</label></div></label>
+        <label><span>Message:</span><textarea rows="2" placeholder="Any special requests?"></textarea></label>
+        <button class="btn" type="submit">📅 &nbsp; Book a Table</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- RIGHT: FIND US -->
+  <div class="card">
+    <div class="card-header">📍 &nbsp; FIND US</div>
+    <div class="card-body">
+      <div style="display:flex; gap:10px;">
+        <div style="flex:1;">
+          <div class="info-row">📍 <b>14 Coffee Lane,<br>Westlands, Nairobi</b></div>
+          <div class="info-row">✉️ info@savannabrew.co.ke</div>
+          <div class="info-row">📞 +254 700 123 456</div>
+        </div>
+        <div class="hours">
+          <b>🕒 OPENING HOURS</b>
+          <div><span>Monday - Friday</span><span>9:00 AM - 9:00 PM</span></div>
+          <div><span>Saturday</span><span>7:00 AM - 10:00 PM</span></div>
+          <div><span>Sunday</span><span>8:00 AM - 8:00 PM</span></div>
+        </div>
+      </div>
+      <iframe class="map" src="https://www.google.com/maps?q=Westlands,Nairobi&output=embed"></iframe>
+      <a class="map-btn" href="https://www.google.com/maps?q=14+Coffee+Lane+Westlands+Nairobi" target="_blank">📍 Open in Google Maps ↗</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div><h3>☕ Savanna Brew</h3><p>Brewed in Kenya. Served with love.</p></div>
+  <div><p><b>Follow Us:</b></p><p>Facebook &nbsp; Instagram &nbsp; X &nbsp; YouTube</p></div>
+  <div><p><b>Contact Us:</b></p><p>info@savannabrew.co.ke<br>+254 700 123 456</p></div>
+</footer>
+
+</body>
+</html>
