@@ -1,16 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Gallery | Savanna Brew Café</title><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery - Savanna Brew</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+body { background:#fff8ec; color:#3b2314; }
+.topbar { background:#fff; display:flex; justify-content:space-between; align-items:center; padding:10px 20px; border-bottom:3px solid #5c3317; }
+.logo { display:flex; align-items:center; gap:10px; }
+.logo-text { font-size:24px; font-weight:bold; color:#5c3317; line-height:1; }
+.logo-text small { font-size:10px; letter-spacing:2px; color:#b7792b; display:block; }
+nav a { text-decoration:none; color:#5c3317; margin:0 10px; font-weight:bold; padding:6px 12px; border-radius:20px; }
+nav a.active { background:#5c3317; color:#fff; }
+.hero { background:#5c3317; color:#fff; padding:30px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+.hero h1 { font-size:52px; font-style:italic; font-weight:bold; line-height:1; }
+.hero img { width:280px; max-width:100%; height:170px; object-fit:cover; border-radius:10px; border:3px solid #fff; }
+.container { max-width:1000px; margin:20px auto; padding:0 15px; }
+.grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:15px; }
+.card { background:#fff; border:1px solid #e8d5a8; border-radius:12px; overflow:hidden; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.08); }
+.card img { width:100%; height:170px; object-fit:cover; display:block; }
+.card p { padding:10px; font-size:15px; color:#5c3317; }
+footer { background:#5c3317; color:#fff; padding:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:15px; margin-top:25px; }
+footer h3 { font-size:20px; }
+footer a { color:#fff; text-decoration:none; }
+@media(max-width:700px){ .grid{grid-template-columns: repeat(2, 1fr);} .hero h1{font-size:36px;} nav a{margin:0 4px; padding:5px 7px; font-size:13px;} }
+</style>
+</head>
 <body>
-<header><div class="nav-wrap"><a href="index.html" class="logo">Savanna Brew<span>COFFEE • GOOD VIBES • KENYA</span></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="menu.html">Menu</a></li><li><a href="gallery.html" class="active">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></header>
-<main><h1>Gallery</h1><p>A peek inside Savanna Brew Café - our drinks, our pastries, and our people.</p><div class="gallery">
-<figure><img src="images/gallery-1.jpg" alt="Barista pouring latte art at Savanna Brew"><figcaption>Latte art, made fresh</figcaption></figure>
-<figure><img src="images/gallery-2.jpg" alt="Cafe interior with wooden tables in Westlands"><figcaption>Our cosy interior</figcaption></figure>
-<figure><img src="images/gallery-3.jpg" alt="Fresh pastries on display at Savanna Brew"><figcaption>Morning pastries</figcaption></figure>
-<figure><img src="images/gallery-4.jpg" alt="Friends enjoying coffee together"><figcaption>Good vibes with friends</figcaption></figure>
-<figure><img src="images/gallery-5.jpg" alt="Coffee beans from Nyeri Kenya"><figcaption>Beans from Nyeri</figcaption></figure>
-<figure><img src="images/gallery-6.jpg" alt="Outdoor seating at Savanna Brew Cafe"><figcaption>Outdoor seating</figcaption></figure>
+
+<div class="topbar">
+  <div class="logo">
+    <span style="font-size:32px;">☕</span>
+    <div class="logo-text">Savanna Brew<small>COFFEE • GOOD VIBES • KENYA</small></div>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </div>
-<h2>Watch Us Brew</h2><video controls width="100%"><source src="media/brew-video.mp4" type="video/mp4">Your browser does not support the video tag.</video></main>
-<footer><div class="footer-grid"><div><h3>Savanna Brew</h3><p>14 Coffee Lane, Westlands, Nairobi<br>+254 700 123 456<br><a href="mailto:hello@savannabrew.example">hello@savannabrew.example</a></p></div><div><h3>Opening Hours</h3><p>Mon - Fri: 7:00 AM - 9:00 PM<br>Sat: 8:00 AM - 10:00 PM<br>Sun: 9:00 AM - 6:00 PM</p></div><div><h3>Follow Us</h3><p><a href="https://instagram.com/savannabrew" target="_blank" rel="noopener">Instagram @savannabrew</a><br><a href="https://facebook.com/savannabrewcafe" target="_blank" rel="noopener">Facebook /savannabrewcafe</a></p></div></div><p class="copyright">© 2026 Savanna Brew Café. All rights reserved.</p></footer>
-</body></html>
+
+<div class="hero">
+  <div>
+    <h1>Photo Gallery</h1>
+  </div>
+  <img src="images/hero.jpg" alt="Latte art coffee">
+</div>
+
+<div class="container">
+  <div class="grid">
+    <div class="card"><img src="images/latte.jpg" alt="Latte"><p>Latte</p></div>
+    <div class="card"><img src="images/gallery-2.jpg" alt="Cappuccino"><p>Cappuccino</p></div>
+    <div class="card"><img src="images/iced-coffee.jpg" alt="Iced Coffee"><p>Iced Coffee</p></div>
+    <div class="card"><img src="images/iced-latte.jpg" alt="Iced Latte"><p>Iced Latte</p></div>
+    <div class="card"><img src="images/gallery-5.jpg" alt="Croissant"><p>Croissant</p></div>
+    <div class="card"><img src="images/muffin.jpg" alt="Muffin"><p>Muffin</p></div>
+    <div class="card"><img src="images/gallery-3.jpg" alt="Chocolate Cake"><p>Chocolate Cake</p></div>
+    <div class="card"><img src="images/gallery-4.jpg" alt="Fruit Tart"><p>Fruit Tart</p></div>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <h3>☕ Savanna Brew</h3>
+    <p>Brewed in Kenya. Served with love.</p>
+  </div>
+  <div>
+    <p><b>Follow Us:</b></p>
+    <p>Facebook &nbsp; Instagram &nbsp; X &nbsp; YouTube</p>
+  </div>
+  <div>
+    <p><b>Contact Us:</b></p>
+    <p>info@savannabrew.co.ke<br>+254 700 123 456</p>
+  </div>
+</footer>
+
+</body>
+</html>
